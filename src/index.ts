@@ -1,11 +1,10 @@
-// import DataLoader from "./DataFetching/DataLoader"; 
-// import TextFileLoader from "./DataFetching/TextFileLoader";
+// export const sum = (a:number, b:number): number => {
+//   return a + b;
+// }
 
-// const dataLoader = new DataLoader("../data/data.txt");
+import DataLoader from "./DataFetching/DataLoader"; 
+import TextFileLoader from "./DataFetching/TextFileLoader";
 
-// const employees = dataLoader.fetchEmployees(TextFileLoader);
-// console.log(employees);
-
-export const sum = (a:number, b:number): number => {
-  return a + b;
-}
+const employeeFilePath = process.argv[2];
+const dataLoader = new DataLoader(employeeFilePath);
+const employees = dataLoader.fetchEmployees(TextFileLoader);

@@ -6,7 +6,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     // All imported modules in your tests should be mocked automatically
-    automock: true,
+    // automock: true,
     // Stop running tests after `n` failures
     // bail: 0,
     // The directory where Jest should store its cached dependency information
