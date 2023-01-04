@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672804311428" clover="3.2.0">
+  <project timestamp="1672804311428" name="All files">
+    <metrics statements="11" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1" elements="15" coveredelements="3" complexity="0" loc="11" ncloc="11" packages="2" files="3" classes="3"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="/Users/Peter/Coding/Node/Projects/WorkersOverlapingTime/src/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.DataFetching">
+      <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="DataLoader.ts" path="/Users/Peter/Coding/Node/Projects/WorkersOverlapingTime/src/DataFetching/DataLoader.ts">
+        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+      </file>
+      <file name="TextFileLoader.ts" path="/Users/Peter/Coding/Node/Projects/WorkersOverlapingTime/src/DataFetching/TextFileLoader.ts">
+        <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
