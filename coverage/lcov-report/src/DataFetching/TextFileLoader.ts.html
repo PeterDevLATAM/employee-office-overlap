@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.55% </span>
+                <span class="strong">95.45% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>43/45</span>
+                <span class='fraction'>42/44</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.87% </span>
+                <span class="strong">94.73% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>37/39</span>
+                <span class='fraction'>36/38</span>
             </div>
         
             
@@ -141,39 +141,10 @@
 <a name='L76'></a><a href='#L76'>76</a>
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L79'></a><a href='#L79'>79</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -220,9 +191,12 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -249,22 +223,6 @@
 import IWorkSession from "src/Employee/IWorkSession";
 import IDataFetcher from "./IDataFetcher";
 import * as fs from "fs";
-const SAMPLE_DATA = [
-  {
-    name: "Pedro",
-    schedule: [
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-    ],
-  },
-  {
-    name: "Ana",
-    schedule: [
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-    ],
-  },
-];
 &nbsp;
 export default class TextFileLoader implements IDataFetcher {
   fetchEmployees(path: string): IEmployee[] {
@@ -310,6 +268,8 @@ export default class TextFileLoader implements IDataFetcher {
     }
     return employees;
   }
+&nbsp;
+  // I could also check if startTime &lt; endTime, if the days are valid but I'm going to assume they are checked already....
   private getEmployeeSchedule(workSessionsArr: string[]) {
     return workSessionsArr.map((workSessionStr) =&gt; {
       const { dayStr, startTimeStr, endTimeStr } = this.sliceData(workSessionStr);
@@ -320,6 +280,7 @@ export default class TextFileLoader implements IDataFetcher {
       };
     });
   }
+&nbsp;
   private sliceData(workSessionStr: string) {
     const dayStr = workSessionStr.slice(0, 2);
     const startTimeStr = workSessionStr.slice(2, 7);
@@ -343,7 +304,7 @@ export default class TextFileLoader implements IDataFetcher {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-04T15:51:14.193Z
+                at 2023-01-05T00:12:15.923Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

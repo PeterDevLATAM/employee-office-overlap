@@ -3,23 +3,6 @@ import IWorkSession from "src/Employee/IWorkSession";
 import IDataFetcher from "./IDataFetcher";
 import * as fs from "fs";
 
-const SAMPLE_DATA = [
-  {
-    name: "Pedro",
-    schedule: [
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-    ],
-  },
-  {
-    name: "Ana",
-    schedule: [
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-      { day: "MO", startTime: "10:00", endTime: "12:00" },
-    ],
-  },
-];
-
 export default class TextFileLoader implements IDataFetcher {
   fetchEmployees(path: string): IEmployee[] {
     let fileContent: string = "";
