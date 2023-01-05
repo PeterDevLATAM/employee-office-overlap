@@ -1,5 +1,5 @@
-import TextFileLoader from "../../DataFetching/TextFileLoader";
-import DataLoader from "../../DataFetching/DataLoader";
+import TextFileLoader from "../../Models/DataFetching/TextFileLoader"
+import DataLoader from "../../Models/DataFetching/DataLoader";
 import { SAMPLE_DATA, SAMPLE_DATA_2 } from "../../__mocks__/mock-data";
 
 

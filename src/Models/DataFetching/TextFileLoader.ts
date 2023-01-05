@@ -1,5 +1,5 @@
 import IEmployee from "../Employee/IEmployee";
-import IWorkSession from "src/Employee/IWorkSession";
+import IWorkSession from "../Employee/IWorkSession";
 import IDataFetcher from "./IDataFetcher";
 import * as fs from "fs";
 

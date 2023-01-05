@@ -9,6 +9,7 @@ export default class DataLoader {
   }
 
   fetchEmployees(srcType: IDataFetcherConstructor) {
-    return new srcType().fetchEmployees(this.path);
+    this.data= new srcType().fetchEmployees(this.path)
+    return this.data;
   }
 }
