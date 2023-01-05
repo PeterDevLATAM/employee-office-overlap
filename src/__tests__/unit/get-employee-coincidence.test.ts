@@ -1,4 +1,4 @@
-import Organization from "../../Organization/Organization";
+import Organization from "../../Models/Organization/Organization";
 import {
   SAMPLE_DATA,
   SAMPLE_DATA_2,
@@ -10,7 +10,8 @@ describe("Test getEmployeeOfficeOverlap", () => {
   // I'm assuming, according to instructions that there're at least 5 employees, so no testing for when is 1 or none
 
   test("Dataset 1", () => {
-    const org = new Organization("ACME", SAMPLE_DATA);
+    const org = new Organization("ACME", "");
+    org.addEmployees(SAMPLE_DATA)
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
       "RENE-ASTRID: 2",
@@ -20,13 +21,15 @@ describe("Test getEmployeeOfficeOverlap", () => {
     expect(result).toStrictEqual(expected);
   });
   test("Dataset 2", () => {
-    const org = new Organization("ACME", SAMPLE_DATA_2);
+    const org = new Organization("ACME", "");
+    org.addEmployees(SAMPLE_DATA_2)
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = ["RENE-ASTRID: 3"];
     expect(result).toStrictEqual(expected);
   });
   test("Dataset 3", () => {
-    const org = new Organization("ACME", SAMPLE_DATA_3);
+    const org = new Organization("ACME", "");
+    org.addEmployees(SAMPLE_DATA_3)
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
       "ASTRID-ANDRES: 3",
@@ -43,7 +46,8 @@ describe("Test getEmployeeOfficeOverlap", () => {
     expect(result).toStrictEqual(expected);
   });
   test("Dataset 4", () => {
-    const org = new Organization("ACME", SAMPLE_DATA_4);
+    const org = new Organization("ACME", "");
+    org.addEmployees(SAMPLE_DATA_4)
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
       "ANTONIO-EIMY: 1",
