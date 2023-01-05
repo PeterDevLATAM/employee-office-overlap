@@ -49,9 +49,9 @@ It has a quadratic solution that I'm, at the moment, working to improve. It uses
     $ npm run build
  ````  
 ### Executing  
-
+***If wanted, the mock data available at src/\__mocks__/data/ could be used for testing manually.***
 ````sh
-    node dist/index.js path-to-file/file/.txt
+    node dist/index.js path-to-file/file/file-name.txt
  ````  
 ### Execute Suite of Tests 
 
