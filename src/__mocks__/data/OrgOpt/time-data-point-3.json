@@ -1,0 +1,648 @@
+{
+  "MO": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "10:00",
+        "type": "IN",
+        "employee": {
+          "name": "ANDRES",
+          "schedule": [
+            { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+            { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+            { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "10:00",
+          "type": "IN",
+          "employee": {
+            "name": "ASTRID",
+            "schedule": [
+              { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+              { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "10:00",
+            "type": "IN",
+            "employee": {
+              "name": "RENE",
+              "schedule": [
+                { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "12:00",
+              "type": "OUT",
+              "employee": {
+                "name": "ANDRES",
+                "schedule": [
+                  { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                  { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+                  { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": {
+                "timePoint": "12:00",
+                "type": "OUT",
+                "employee": {
+                  "name": "ASTRID",
+                  "schedule": [
+                    { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                    { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+                    { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                  ],
+                  "department": "CommonDepartment"
+                },
+                "nextDataPoint": {
+                  "timePoint": "12:00",
+                  "type": "OUT",
+                  "employee": {
+                    "name": "RENE",
+                    "schedule": [
+                      { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                      { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                      { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                      { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                      { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                    ],
+                    "department": "CommonDepartment"
+                  },
+                  "nextDataPoint": {
+                    "timePoint": "24:00",
+                    "nextDataPoint": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 6
+  },
+  "TU": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "08:00",
+        "type": "IN",
+        "employee": {
+          "name": "JUAN",
+          "schedule": [
+            { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+            { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "10:00",
+          "type": "IN",
+          "employee": {
+            "name": "RENE",
+            "schedule": [
+              { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+              { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+              { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+              { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "11:00",
+            "type": "IN",
+            "employee": {
+              "name": "PEDRO",
+              "schedule": [
+                { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+                { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+                { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+                { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "11:15",
+              "type": "OUT",
+              "employee": {
+                "name": "JUAN",
+                "schedule": [
+                  { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+                  { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+                  { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+                  { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": {
+                "timePoint": "12:00",
+                "type": "OUT",
+                "employee": {
+                  "name": "RENE",
+                  "schedule": [
+                    { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                    { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                    { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                    { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                    { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                  ],
+                  "department": "CommonDepartment"
+                },
+                "nextDataPoint": {
+                  "timePoint": "13:00",
+                  "type": "OUT",
+                  "employee": {
+                    "name": "PEDRO",
+                    "schedule": [
+                      { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+                      { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+                      { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+                      { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+                    ],
+                    "department": "CommonDepartment"
+                  },
+                  "nextDataPoint": {
+                    "timePoint": "24:00",
+                    "nextDataPoint": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 6
+  },
+  "TH": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "01:00",
+        "type": "IN",
+        "employee": {
+          "name": "RENE",
+          "schedule": [
+            { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+            { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+            { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+            { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+            { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "02:00",
+          "type": "IN",
+          "employee": {
+            "name": "PEDRO",
+            "schedule": [
+              { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+              { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+              { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "03:00",
+            "type": "OUT",
+            "employee": {
+              "name": "RENE",
+              "schedule": [
+                { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "06:00",
+              "type": "OUT",
+              "employee": {
+                "name": "PEDRO",
+                "schedule": [
+                  { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+                  { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+                  { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+                  { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": {
+                "timePoint": "08:00",
+                "type": "IN",
+                "employee": {
+                  "name": "JUAN",
+                  "schedule": [
+                    { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+                    { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+                    { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+                    { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+                  ],
+                  "department": "CommonDepartment"
+                },
+                "nextDataPoint": {
+                  "timePoint": "10:00",
+                  "type": "OUT",
+                  "employee": {
+                    "name": "JUAN",
+                    "schedule": [
+                      { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+                      { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+                      { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+                      { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+                    ],
+                    "department": "CommonDepartment"
+                  },
+                  "nextDataPoint": {
+                    "timePoint": "12:00",
+                    "type": "IN",
+                    "employee": {
+                      "name": "ANDRES",
+                      "schedule": [
+                        {
+                          "day": "MO",
+                          "startTime": "10:00",
+                          "endTime": "12:00"
+                        },
+                        {
+                          "day": "TH",
+                          "startTime": "12:00",
+                          "endTime": "14:00"
+                        },
+                        {
+                          "day": "SU",
+                          "startTime": "20:00",
+                          "endTime": "21:00"
+                        }
+                      ],
+                      "department": "CommonDepartment"
+                    },
+                    "nextDataPoint": {
+                      "timePoint": "12:00",
+                      "type": "IN",
+                      "employee": {
+                        "name": "ASTRID",
+                        "schedule": [
+                          {
+                            "day": "MO",
+                            "startTime": "10:00",
+                            "endTime": "12:00"
+                          },
+                          {
+                            "day": "TH",
+                            "startTime": "12:00",
+                            "endTime": "14:00"
+                          },
+                          {
+                            "day": "SU",
+                            "startTime": "20:00",
+                            "endTime": "21:00"
+                          }
+                        ],
+                        "department": "CommonDepartment"
+                      },
+                      "nextDataPoint": {
+                        "timePoint": "14:00",
+                        "type": "OUT",
+                        "employee": {
+                          "name": "ANDRES",
+                          "schedule": [
+                            {
+                              "day": "MO",
+                              "startTime": "10:00",
+                              "endTime": "12:00"
+                            },
+                            {
+                              "day": "TH",
+                              "startTime": "12:00",
+                              "endTime": "14:00"
+                            },
+                            {
+                              "day": "SU",
+                              "startTime": "20:00",
+                              "endTime": "21:00"
+                            }
+                          ],
+                          "department": "CommonDepartment"
+                        },
+                        "nextDataPoint": {
+                          "timePoint": "14:00",
+                          "type": "OUT",
+                          "employee": {
+                            "name": "ASTRID",
+                            "schedule": [
+                              {
+                                "day": "MO",
+                                "startTime": "10:00",
+                                "endTime": "12:00"
+                              },
+                              {
+                                "day": "TH",
+                                "startTime": "12:00",
+                                "endTime": "14:00"
+                              },
+                              {
+                                "day": "SU",
+                                "startTime": "20:00",
+                                "endTime": "21:00"
+                              }
+                            ],
+                            "department": "CommonDepartment"
+                          },
+                          "nextDataPoint": {
+                            "timePoint": "24:00",
+                            "nextDataPoint": null
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 10
+  },
+  "SA": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "12:00",
+        "type": "IN",
+        "employee": {
+          "name": "JUAN",
+          "schedule": [
+            { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+            { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "14:00",
+          "type": "OUT",
+          "employee": {
+            "name": "JUAN",
+            "schedule": [
+              { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+              { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+              { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+              { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "14:00",
+            "type": "IN",
+            "employee": {
+              "name": "RENE",
+              "schedule": [
+                { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "18:00",
+              "type": "OUT",
+              "employee": {
+                "name": "RENE",
+                "schedule": [
+                  { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                  { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                  { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                  { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                  { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": { "timePoint": "24:00", "nextDataPoint": null }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 4
+  },
+  "SU": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "20:00",
+        "type": "IN",
+        "employee": {
+          "name": "ANDRES",
+          "schedule": [
+            { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+            { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+            { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "20:00",
+          "type": "IN",
+          "employee": {
+            "name": "ASTRID",
+            "schedule": [
+              { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+              { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "20:00",
+            "type": "IN",
+            "employee": {
+              "name": "RENE",
+              "schedule": [
+                { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "21:00",
+              "type": "OUT",
+              "employee": {
+                "name": "ANDRES",
+                "schedule": [
+                  { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                  { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+                  { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": {
+                "timePoint": "21:00",
+                "type": "OUT",
+                "employee": {
+                  "name": "ASTRID",
+                  "schedule": [
+                    { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                    { "day": "TH", "startTime": "12:00", "endTime": "14:00" },
+                    { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                  ],
+                  "department": "CommonDepartment"
+                },
+                "nextDataPoint": {
+                  "timePoint": "21:00",
+                  "type": "OUT",
+                  "employee": {
+                    "name": "RENE",
+                    "schedule": [
+                      { "day": "MO", "startTime": "10:00", "endTime": "12:00" },
+                      { "day": "TU", "startTime": "10:00", "endTime": "12:00" },
+                      { "day": "TH", "startTime": "01:00", "endTime": "03:00" },
+                      { "day": "SA", "startTime": "14:00", "endTime": "18:00" },
+                      { "day": "SU", "startTime": "20:00", "endTime": "21:00" }
+                    ],
+                    "department": "CommonDepartment"
+                  },
+                  "nextDataPoint": {
+                    "timePoint": "24:00",
+                    "nextDataPoint": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 6
+  },
+  "WE": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "08:00",
+        "type": "IN",
+        "employee": {
+          "name": "JUAN",
+          "schedule": [
+            { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+            { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+            { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "08:00",
+          "type": "IN",
+          "employee": {
+            "name": "PEDRO",
+            "schedule": [
+              { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+              { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+              { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": {
+            "timePoint": "10:00",
+            "type": "OUT",
+            "employee": {
+              "name": "JUAN",
+              "schedule": [
+                { "day": "TU", "startTime": "08:00", "endTime": "11:15" },
+                { "day": "WE", "startTime": "08:00", "endTime": "10:00" },
+                { "day": "TH", "startTime": "08:00", "endTime": "10:00" },
+                { "day": "SA", "startTime": "12:00", "endTime": "14:00" }
+              ],
+              "department": "CommonDepartment"
+            },
+            "nextDataPoint": {
+              "timePoint": "12:00",
+              "type": "OUT",
+              "employee": {
+                "name": "PEDRO",
+                "schedule": [
+                  { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+                  { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+                  { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+                  { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+                ],
+                "department": "CommonDepartment"
+              },
+              "nextDataPoint": { "timePoint": "24:00", "nextDataPoint": null }
+            }
+          }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 4
+  },
+  "FR": {
+    "head": {
+      "timePoint": "00:00",
+      "nextDataPoint": {
+        "timePoint": "09:00",
+        "type": "IN",
+        "employee": {
+          "name": "PEDRO",
+          "schedule": [
+            { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+            { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+            { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+            { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+          ],
+          "department": "CommonDepartment"
+        },
+        "nextDataPoint": {
+          "timePoint": "13:00",
+          "type": "OUT",
+          "employee": {
+            "name": "PEDRO",
+            "schedule": [
+              { "day": "TU", "startTime": "11:00", "endTime": "13:00" },
+              { "day": "WE", "startTime": "08:00", "endTime": "12:00" },
+              { "day": "TH", "startTime": "02:00", "endTime": "06:00" },
+              { "day": "FR", "startTime": "09:00", "endTime": "13:00" }
+            ],
+            "department": "CommonDepartment"
+          },
+          "nextDataPoint": { "timePoint": "24:00", "nextDataPoint": null }
+        }
+      }
+    },
+    "tail": { "timePoint": "24:00", "nextDataPoint": null },
+    "length": 2
+  }
+}

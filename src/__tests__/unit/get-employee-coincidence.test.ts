@@ -11,7 +11,7 @@ describe("Test getEmployeeOfficeOverlap", () => {
 
   test("Dataset 1", () => {
     const org = new Organization("ACME", "");
-    org.addEmployees(SAMPLE_DATA)
+    org.addEmployees(SAMPLE_DATA);
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
       "RENE-ASTRID: 2",
@@ -22,21 +22,21 @@ describe("Test getEmployeeOfficeOverlap", () => {
   });
   test("Dataset 2", () => {
     const org = new Organization("ACME", "");
-    org.addEmployees(SAMPLE_DATA_2)
+    org.addEmployees(SAMPLE_DATA_2);
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = ["RENE-ASTRID: 3"];
     expect(result).toStrictEqual(expected);
   });
   test("Dataset 3", () => {
     const org = new Organization("ACME", "");
-    org.addEmployees(SAMPLE_DATA_3)
+    org.addEmployees(SAMPLE_DATA_3);
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
+      "ANDRES-JUAN: 0",
+      "ANDRES-PEDRO: 0",
       "ASTRID-ANDRES: 3",
       "ASTRID-JUAN: 0",
       "ASTRID-PEDRO: 0",
-      "JUAN-ANDRES: 0",
-      "PEDRO-ANDRES: 0",
       "PEDRO-JUAN: 2",
       "RENE-ANDRES: 2",
       "RENE-ASTRID: 2",
@@ -47,7 +47,7 @@ describe("Test getEmployeeOfficeOverlap", () => {
   });
   test("Dataset 4", () => {
     const org = new Organization("ACME", "");
-    org.addEmployees(SAMPLE_DATA_4)
+    org.addEmployees(SAMPLE_DATA_4);
     const result: string[] = org.getEmployeeOfficeOverlap().sort();
     const expected = [
       "ANTONIO-EIMY: 1",

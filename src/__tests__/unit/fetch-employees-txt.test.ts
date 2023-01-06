@@ -1,6 +1,6 @@
 import TextFileLoader from "../../Models/DataFetching/TextFileLoader"
 import DataLoader from "../../Models/DataFetching/DataLoader";
-import { SAMPLE_DATA, SAMPLE_DATA_2 } from "../../__mocks__/mock-data";
+import { SAMPLE_DATA, SAMPLE_DATA_2, SAMPLE_DATA_3 } from "../../__mocks__/mock-data";
 
 
 describe("Test Txt File data loading", () => {
@@ -30,5 +30,11 @@ describe("Test Txt File data loading", () => {
     const dataLoader = new DataLoader("src/__mocks__/data/data2.txt");
     const employees = dataLoader.fetchEmployees(TextFileLoader);
     expect(employees).toEqual(SAMPLE_DATA_2);
+  });
+  test("Return Employee Array when ok, dataset 3", () => {
+    const dataLoader = new DataLoader("src/__mocks__/data/test-data-3.txt");
+    const employees = dataLoader.fetchEmployees(TextFileLoader);
+    // console.log(JSON.stringify(employees))
+    expect(employees).toEqual(SAMPLE_DATA_3);
   });
 });
