@@ -15,21 +15,30 @@ describe("Test making datapoints map", () => {
   test("Dataset 2", () => {
     const org = new Organization("ACME", "");
     org.addEmployees(SAMPLE_DATA_2);
-    const result = org.getGeneralTimeDataPoint();
+    const result: any = org.getGeneralTimeDataPoint();
+    Object.keys(result).forEach((key) => {
+      result[key].employees = Array.from(result[key].employees);
+    });
     expect(result).toEqual(JSON_DATA_2);
   });
 
   test("Dataset 3", () => {
     const org = new Organization("ACME", "");
     org.addEmployees(SAMPLE_DATA_3);
-    const result = org.getGeneralTimeDataPoint();
+    const result: any = org.getGeneralTimeDataPoint();
+    Object.keys(result).forEach((key) => {
+      result[key].employees = Array.from(result[key].employees);
+    });
     expect(result).toEqual(JSON_DATA_3);
   });
 
   test("Dataset 4", () => {
     const org = new Organization("ACME", "");
     org.addEmployees(SAMPLE_DATA_4);
-    const result = org.getGeneralTimeDataPoint();
+    const result: any = org.getGeneralTimeDataPoint();
+    Object.keys(result).forEach((key) => {
+      result[key].employees = Array.from(result[key].employees);
+    });
     expect(result).toEqual(JSON_DATA_4);
   });
 });
@@ -38,21 +47,16 @@ describe("Unified Concurrency map", () => {
   test("Dataset 2", () => {
     const org = new Organization("ACME", "");
     org.addEmployees(SAMPLE_DATA_2);
-    const result = JSON.stringify(org.getOcupancyIntervalsNodeList());
+    const generalSchedule = org.getGeneralTimeDataPoint();
+    const result = JSON.stringify(org.getOcupancyIntervalsNodeList(generalSchedule));
     expect(result).toEqual(JSON.stringify(JSON_DATA_OCUPANCY_2));
   });
 
   test("Dataset 3", () => {
     const org = new Organization("ACME", "");
     org.addEmployees(SAMPLE_DATA_3);
-    const result = JSON.stringify(org.getOcupancyIntervalsNodeList());
-        // console.log(JSON.stringify(result))
-    // Object.keys(result).forEach((key) => {
-    //   console.log(key);
-    //   result[key].printNodeList();
-    // });
-
+    const generalSchedule = org.getGeneralTimeDataPoint();
+    const result = JSON.stringify(org.getOcupancyIntervalsNodeList(generalSchedule));
     expect(result).toEqual(JSON.stringify(JSON_DATA_OCUPANCY_3));
   });
-
 });
