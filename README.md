@@ -32,6 +32,7 @@ A small program that tells how many employees go concurrently to the office<br /
 The solution is built with node/typescript. Is structured in the following manner:
 ![Screenshot 2023-01-05 at 11 43 20 AM](https://user-images.githubusercontent.com/101288216/210834008-c5e2db7e-7ba2-4b2e-8cbb-577cdd32ab38.png)
 It has a quadratic solution that I'm, at the moment, working to improve. It uses Factory and Strategy Design principles.
+I realized that the problem itself is maybe a quadratic solution wheater we like it or not, and that's why I didn't went to far. Anyway... in the real world, I think it would be more valuable to the business to have a LinkedList data structure like the one I proposed in the feature/... branch. In case the question is which are the busiest hours, the busiest days, etc...
 <br/>
 
 ## Instructions 
