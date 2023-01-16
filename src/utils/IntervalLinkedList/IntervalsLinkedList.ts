@@ -16,19 +16,31 @@ export default class IntervalsLinkedList {
   }
   
   getEmployeeCoincidencePerDay(employees: Set<IEmployee>){
-    let coincidence:{[name: string]: Set<IEmployee>} = {}
+    let coincidenceMap:{[name: string]: Set<IEmployee>} = {}
     employees.forEach(employee => {
-      if(!coincidence[employee.name]) coincidence[employee.name]= new Set()
-      let currentNode: IntervalPoint | null = this.head.nextInterval;
-      while(currentNode){
-        if(currentNode.employees.has(employee)){
-          coincidence[employee.name] = new Set([...currentNode.employees])
-        }
-        currentNode = currentNode.nextInterval
-      }
-      coincidence[employee.name].delete(employee)
+      if(!coincidenceMap[employee.name]) coincidenceMap[employee.name]= new Set()
+      this.traverseListAndAddIfNecessary(employee, coincidenceMap);
+      this.deleteSameEmployeeFromSet(coincidenceMap, employee);
     })
-    return coincidence
+    return coincidenceMap
+  }
+
+  private deleteSameEmployeeFromSet(coincidenceMap: { [name: string]: Set<IEmployee>; }, employee: IEmployee) {
+    coincidenceMap[employee.name].delete(employee);
+  }
+
+  private traverseListAndAddIfNecessary(employee: IEmployee, coincidence: { [name: string]: Set<IEmployee>; }) {
+    let currentNode: IntervalPoint | null = this.head.nextInterval;
+    while (currentNode) {
+      this.addCoincidentEmployees(currentNode, employee, coincidence);
+      currentNode = currentNode.nextInterval;
+    }
+  }
+
+  private addCoincidentEmployees(currentNode: IntervalPoint, employee: IEmployee, coincidence: { [name: string]: Set<IEmployee>; }) {
+    if (currentNode.employees.has(employee)) {
+      coincidence[employee.name] = new Set([...currentNode.employees]);
+    }
   }
 
   constructList(dayGeneralDataPoint: TimePointsLinkedList) {

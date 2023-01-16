@@ -5,9 +5,13 @@ import TextFileLoader from "../DataFetching/TextFileLoader";
 import TimePointsLinkedList from "../../utils/TimePointsLinkedList/TimePointsLinkedList";
 import IntervalsLinkedList from "../../utils/IntervalLinkedList/IntervalsLinkedList";
 import IWorkSession from "../Employee/IWorkSession";
+
+
 type GeneralSchedule = {
   [day: string]: { timeline: TimePointsLinkedList; employees: Set<IEmployee> };
 };
+type OccupancyTimeLine = { [day: string]: IntervalsLinkedList; }
+type EmployeeCoincidenceMap = { [name: string]: Map<string, number>; }
 
 export default class Organization {
   name: string;
@@ -15,6 +19,7 @@ export default class Organization {
 
   constructor(name: string, employeeFilePath: string) {
     const dataLoader = new DataLoader(employeeFilePath);
+    // This was fixed in the main branch 
     this.employees = dataLoader.fetchEmployees(TextFileLoader);
     this.name = name;
   }
@@ -33,35 +38,47 @@ export default class Organization {
   getEmployeeOfficeOverlap() {
     // I'm constructing two datapoints map, it could be done in one step with only one map
     const generalSchedule = this.getGeneralTimeDataPoint();
-    const occupancyTimeline =
-      this.getOcupancyIntervalsNodeList(generalSchedule);
-    let employeeCoincidenceMap: { [name: string]: Map<string, number> } = {};
+    const timeLine = this.getOcupancyIntervalsNodeList(generalSchedule);
+    let employeeCoincidenceMap = this.getEmployeeCoincidenceMap(generalSchedule, timeLine);
+    return employeeCoincidenceMap;
+  }
 
+  private getEmployeeCoincidenceMap(generalSchedule: GeneralSchedule, occupancyTimeline: OccupancyTimeLine) {
+    let employeeCoincidenceMap: EmployeeCoincidenceMap = {};
+    this.loopOverDays(generalSchedule, occupancyTimeline, employeeCoincidenceMap);
+    return employeeCoincidenceMap;
+  }
+
+  private loopOverDays(generalSchedule: GeneralSchedule, occupancyTimeline: OccupancyTimeLine, employeeCoincidenceMap: EmployeeCoincidenceMap) {
     let day: keyof typeof generalSchedule;
     for (day in generalSchedule) {
-      const dayOfficeOverlap = occupancyTimeline[
-        day
-      ].getEmployeeCoincidencePerDay(generalSchedule[day].employees);
-      let employee: keyof typeof dayOfficeOverlap;
-      for (employee in dayOfficeOverlap) {
-        if (!employeeCoincidenceMap[employee])
-          employeeCoincidenceMap[employee] = new Map();
-        dayOfficeOverlap[employee].forEach((coincidentEmployee) => {
-          if (!employeeCoincidenceMap[employee].has(coincidentEmployee.name)) {
-            employeeCoincidenceMap[employee].set(coincidentEmployee.name, 1);
-          } else {
-            let count = employeeCoincidenceMap[employee].get(
-              coincidentEmployee.name
-            );
-            employeeCoincidenceMap[employee].set(
-              coincidentEmployee.name,
-              count! + 1
-            );
-          }
-        });
-      }
+      const dayOfficeOverlap = occupancyTimeline[day].getEmployeeCoincidencePerDay(generalSchedule[day].employees);
+      this.loopOverDailyEmployeeCoincidence(dayOfficeOverlap, employeeCoincidenceMap);
     }
-    return employeeCoincidenceMap;
+  }
+
+  private loopOverDailyEmployeeCoincidence(dayOfficeOverlap: { [name: string]: Set<IEmployee>; }, employeeCoincidenceMap: EmployeeCoincidenceMap) {
+    let employee: keyof typeof dayOfficeOverlap;
+    for (employee in dayOfficeOverlap) {
+      if (!employeeCoincidenceMap[employee]) employeeCoincidenceMap[employee] = new Map();
+      this.addToCoincidenceMap(dayOfficeOverlap, employee, employeeCoincidenceMap);
+    }
+  }
+
+  private addToCoincidenceMap(dayOfficeOverlap: { [name: string]: Set<IEmployee>; }, employee: string, employeeCoincidenceMap: EmployeeCoincidenceMap) {
+    dayOfficeOverlap[employee].forEach((e) => {
+      if (!employeeCoincidenceMap[employee].has(e.name)) {
+        employeeCoincidenceMap[employee].set(e.name, 1);
+      } else {
+        let count = employeeCoincidenceMap[employee].get(
+          e.name
+        );
+        employeeCoincidenceMap[employee].set(
+          e.name,
+          count! + 1
+        );
+      }
+    });
   }
 
   getOcupancyIntervalsNodeList(generalSchedule: GeneralSchedule) {
