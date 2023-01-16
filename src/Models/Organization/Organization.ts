@@ -10,7 +10,7 @@ export default class Organization {
 
   constructor(name: string, employeeFilePath: string) {
     const dataLoader = new DataLoader(employeeFilePath);
-    this.employees = dataLoader.fetchEmployees(TextFileLoader);
+    this.addEmployees(dataLoader.fetchEmployees(TextFileLoader));
     this.name = name;
   }
 
